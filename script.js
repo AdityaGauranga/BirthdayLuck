@@ -21,12 +21,10 @@ function compareValues(sum, luckyNo){
 function checkBDayIsLucky() {
     const dob = dateOfBirth.value;
     const sum = calculateSum(dob);
-    if (sum&&dob){
-        compareValues(sum, luckyNo.value)
-    } else {
-        outputBox.innerText = "Please enter both the fields (￣へ￣)"
-    }
+    if (sum&&dob)
     compareValues(sum, luckyNo.value)
+    else 
+    outputBox.innerText = "Please enter both the fields (￣へ￣)";
 }
 
 function calculateSum(dob) {
