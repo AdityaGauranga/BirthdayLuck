@@ -2,6 +2,19 @@ const dateOfBirth = document.querySelector("#date-of-birth");
 const luckyNo = document.querySelector("#lucky-number");
 const checkNoButton = document.querySelector("#check-number");
 
-checkNoButton.addEventListener("click", function getValues(){
-    console.log(dateOfBirth.value, luckyNo.value);
-})
+function checkBDayIsLucky() {
+    const dob = dateOfBirth.value;
+    const sum = calculateSum(dob);
+    console.log(sum);
+}
+
+function calculateSum(date) {
+    dob = dob.replaceAll("-","");
+    let sum = 0;
+    for (let index = 0; index < dob.length; index++) {
+        sum = sum + Number(dob.charAt(index)); // typecasting used here, converting it into a number from strings since string and numbers cant be added
+    }
+    return sum;
+}
+
+checkNoButton.addEventListener("click", checkBDayIsLucky)
