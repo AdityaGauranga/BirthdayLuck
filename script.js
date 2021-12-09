@@ -1,19 +1,31 @@
 const dateOfBirth = document.querySelector("#date-of-birth");
 const luckyNo = document.querySelector("#lucky-number");
 const checkNoButton = document.querySelector("#check-number");
+const outputBox = document.querySelector("#output-box");
 
 function compareValues(sum, luckyNo){
     if (sum%luckyNo === 0){
-        console.log("Your birthday is lucky （￣︶￣)")
+        outputBox.innerText = "Your birthday is lucky （￣︶￣)" ; 
+        
+        // if you used textarea, use id's .value
+        // outputBox.value = "Your birthday is lucky （￣︶￣)" ;
     }
     else {
-        console.log("Sorry an unlucky birthday it seems ＞﹏＜");
+        outputBox.innerText = "Sorry an unlucky birthday it seems (＞﹏＜)";
+        
+        // if you used textarea, use id's .value
+        // outputBox.value = "Sorry an unlucky birthday it seems ＞﹏＜";
     }
 }
 
 function checkBDayIsLucky() {
     const dob = dateOfBirth.value;
     const sum = calculateSum(dob);
+    if (sum&&dob){
+        compareValues(sum, luckyNo.value)
+    } else {
+        outputBox.innerText = "Please enter both the fields (￣へ￣)"
+    }
     compareValues(sum, luckyNo.value)
 }
 
