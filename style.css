@@ -38,3 +38,10 @@ input {
     padding: 0.5rem;
     border-radius: 0.3rem;
 }
+
+#output-box {
+    text-align: center;
+    padding: 1rem;
+    font-weight: bolder;
+    font-size: larger;
+}

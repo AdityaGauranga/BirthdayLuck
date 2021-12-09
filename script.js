@@ -11,10 +11,10 @@ function compareValues(sum, luckyNo){
         // outputBox.value = "Your birthday is lucky （￣︶￣)" ;
     }
     else {
-        outputBox.innerText = "Sorry an unlucky birthday it seems (＞﹏＜)";
+        outputBox.innerText = "An unlucky birthday it seems (＞﹏＜)";
         
         // if you used textarea, use id's .value
-        // outputBox.value = "Sorry an unlucky birthday it seems ＞﹏＜";
+        // outputBox.value = "An unlucky birthday it seems ＞﹏＜";
     }
 }
 
@@ -24,7 +24,7 @@ function checkBDayIsLucky() {
     if (sum&&dob)
     compareValues(sum, luckyNo.value)
     else 
-    outputBox.innerText = "Please enter both the fields (￣へ￣)";
+    outputBox.innerText = "Enter both fields pwease (￣へ￣)";
 }
 
 function calculateSum(dob) {
